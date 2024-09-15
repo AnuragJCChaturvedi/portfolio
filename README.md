@@ -1,6 +1,6 @@
 # Cleanfolio
 
-Cleanfolio is a portfolio template built with React. However, if you prefer a template built with HTML, CSS, and JavaScript, you can check out [Cleanfolio Minimal](https://github.com/rjshkhr/cleanfolio-minimal).
+Cleanfolio is a portfolio template built with React by Raj Shekhar. I have made changes for my need. However, if you prefer a template built with HTML, CSS, and JavaScript, you can check out his github [Cleanfolio Minimal](https://github.com/rjshkhr/cleanfolio-minimal).
 
 ## Preview
 
