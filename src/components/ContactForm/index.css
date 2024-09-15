@@ -1,0 +1,117 @@
+/* Form container */
+#contact-form {
+    max-width: 500px;
+    width: 100%;
+    margin: 2em auto;
+    padding: 20px;
+    background-color: var(--clr-bg-alt);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-family: 'Poppins', sans-serif;
+    color: var(--clr-fg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation on form load */
+#contact-form:hover {
+    transform: scale(1.02);
+}
+
+/* Label and input container */
+.form-group {
+    position: relative;
+    margin-top: 2em;
+}
+
+/* Input and textarea styles */
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--clr-fg-alt);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--clr-fg);
+    background-color: var(--clr-bg);
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical;
+}
+
+/* Floating label */
+.floating-label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    background-color: var(--clr-bg-alt);
+    padding: 0 5px;
+    color: var(--clr-fg-alt);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+/* Move label on focus or when input is not empty */
+.form-input:focus + .floating-label,
+.form-input:not(:placeholder-shown) + .floating-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: var(--clr-primary);
+}
+
+/* Input focus effect */
+.form-input:focus {
+    border-color: var(--clr-primary);
+    box-shadow: 0 0 8px var(--clr-primary);
+}
+
+/* Button styles */
+#form-button {
+    display: block;
+    width: 100%;
+    padding: 0.8em 1.4em;
+    margin-top: 2em;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    cursor: pointer;
+    color: var(--clr-bg);
+    background-color: var(--clr-primary);
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: background-color 0.4s, transform 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+#form-button:hover {
+    background-color: var(--clr-fg-alt);
+    transform: translateY(-5px);
+}
+
+/* Status message styles */
+#form-status {
+    margin-top: 1.5em;
+    font-size: 1rem;
+    color: var(--clr-fg-alt);
+    text-align: center;
+}
+
+/* Placeholder styles */
+.form-input::placeholder {
+    color: transparent; /* Hide placeholder text */
+}
+
+/* Form responsiveness */
+@media (max-width: 600px) {
+    #contact-form {
+        padding: 15px;
+    }
+
+    .form-input,
+    #form-button {
+        font-size: 0.9rem;
+    }
+}

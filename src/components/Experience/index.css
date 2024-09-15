@@ -1,0 +1,164 @@
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #ffffff, #f2f2f2); /* Subtle gradient */
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
+    color: #333333;
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 80vh;
+    transition: all 0.3s ease; /* Smooth transition for modal appearance */
+}
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker overlay */
+    z-index: 5;
+    backdrop-filter: blur(5px); /* Add a blur effect to the background */
+    transition: background-color 0.3s ease; /* Smooth transition for the overlay */
+}
+
+/* Close button styling */
+.close-button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    margin-top: 1em;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Add a close icon inside the button */
+.close-button::before {
+    content: '✖'; /* Unicode for the close icon */
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Content inside the modal */
+.modal h2, .modal h4, .modal p {
+    margin: 0 0 1em;
+    line-height: 1.5;
+}
+
+.modal h2 {
+    font-size: 1.8rem;
+    color: #3498db; /* Accent color for the title */
+}
+
+.modal h4 {
+    font-size: 1.2rem;
+    color: #666666; /* Subtle color for subtitles */
+}
+
+/* Experience Section */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+}
+
+/* Section Title */
+.section__title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--clr-primary);
+    margin-bottom: 2em;
+}
+
+/* Timeline container */
+.timeline-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 1em;
+}
+
+/* Customize the timeline elements */
+.vertical-timeline-element--work {
+    color: var(--clr-fg);
+}
+
+.vertical-timeline-element-content {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    background-color: #fff; /* Ensure contrast with modal overlay */
+}
+
+/* Button styles */
+.details-button {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    margin-top: 1em;
+}
+
+.details-button:hover {
+    background-color: var(--clr-fg-alt);
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Icon styling */
+.timeline-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Vertical timeline line styling */
+.vertical-timeline::before {
+    background: var(--clr-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .timeline-container {
+        padding: 1em;
+    }
+
+    .details-button {
+        font-size: 0.8rem;
+        padding: 0.4em 0.8em;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust modal for small screens */
+    .modal {
+        max-width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}

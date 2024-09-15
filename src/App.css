@@ -31,12 +31,13 @@ main {
 }
 
 .section {
-  margin-top: 5em;
+  margin-top: 10em;
 }
 
 .section__title {
   text-align: center;
   margin-bottom: 1em;
+  font-size: 1.5em;
   text-transform: uppercase;
 }
 
